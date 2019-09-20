@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nam nhuan</title>
+</head>
+<body>
+<fieldset>
+    <legend>Year</legend>
+    <input id="nhap" type="number">
+    <input onclick="submit()" type="submit">
+    <p id="result"></p>git
+</fieldset>
+<script>
+function submit() {
+    let a=parseInt(document.getElementById("nhap").value);
+    if (a%4){
+        if(a%100){
+            if(a%400){
+                alert("Nam nhuan");
+            }else{
+                alert("Nam thuong");
+            }
+        }else{
+            alert("Nam nhuan");
+        }
+    } else{
+        alert("Nam thuong");
+    }
+}
+</script>
+</body>
+</html>
