@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body style="text-align: center; ">
+<fieldset style="width: 500px;">
+    <legend>Chi So BMI</legend>
+    <label>Chieu cao: </label>
+    <input id="height" type="number"/>
+    <br/>
+    <br/>
+    <label>Can nang: </label>
+    <input id="weight" type="number"/>
+    <br/>
+    <br/>
+    <input onclick="sub()" type="submit"/>
+    <p id="result"></p>
+</fieldset>
+<script>
+    function sub() {
+        let cao = parseInt(document.getElementById("height").value);
+        let nang = parseInt(document.getElementById("weight").value);
+        let a = nang / (cao * cao);
+        if (a < 18) {
+            document.getElementById("result").innerHTML = "Underweight";
+        } else if (18.5< a < 25.0) {
+            document.getElementById("result").innerHTML = "Normal";
+        } else if (25<a < 30.0) {
+            document.getElementById("result").innerHTML = "Overweight";
+        } else {
+            document.getElementById("result").innerHTML = "Obese";
+        }
+    }
+</script>
+</body>
+</html>
