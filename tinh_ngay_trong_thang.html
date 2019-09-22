@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="inputForm" type="number"/>
+    <button onclick="nhap()">Tinh So Ngay</button>
+    <br/>
+    <p id="result"></p>
+</form>
+<script>
+    function nhap() {
+        let a = parseInt(document.getElementById("inputForm").value);
+        let mess = document.getElementById("result").innerText;
+        switch (a) {
+            case a = 1:
+            case a = 3:
+            case a = 5:
+            case a = 7:
+            case a = 8:
+            case a = 10:
+            case a = 12:
+                alert("Thang " + a + " co 31 ngay");
+                break;
+            case a = 2:
+                alert("Thang " + a + " co 28 hoac 29 ngay");
+                break;
+            case a = 4:
+            case a = 6:
+            case a = 9:
+            case a = 11:
+                alert("Thang " + a + " co 30 ngay");
+                break;
+            default:
+                alert("Nhap tu 1-12");
+                break;
+        }
+    }
+</script>
+</body>
+</html>
