@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>You must love me</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <script type="text/javascript">
+        function yesClick() {
+            alert("Yes. you are right ");
+        }
+
+        function noHover() {
+            var x = Math.round(Math.random() * window.innerWidth);
+            var y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('btnNo').style.left = x + 'px';
+            document.getElementById('btnNo').style.top = y + 'px';
+        }
+    </script>
+</head>
+<body style="background-color: aquamarine">
+<h1 style="position:absolute; left:220px; top:175px;">Do you love me?</h1>
+<input onclick="yesClick()" style="position:absolute; left:285px; top:235px;" type="button" value=" YES "/>
+<input id="btnNo" onmouseover="noHover()" style="position:absolute; left:360px; top:235px;" type="button"
+       value="  NO  "/>
+</body>
+</html>
