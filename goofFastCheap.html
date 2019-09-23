@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset style="width: 300px;margin: auto;">
+    <legend>Good Fast Cheap</legend>
+    <table>
+        <tr>
+            <td><input id="good" onclick="nga()" type="checkbox"><label>Good</label></td>
+        </tr>
+        <tr>
+            <td><input id="fast" onclick="nga()" type="checkbox"><label>Fast</label></td>
+        </tr>
+        <tr>
+            <td><input id="cheap" onclick="nga()" type="checkbox"><label>Cheap</label></td>
+        </tr>
+    </table>
+</fieldset>
+<script>
+    let good = document.getElementById("good");
+    let fast = document.getElementById("fast");
+    let cheap = document.getElementById("cheap");
+
+    function nga() {
+        if (good.checked && fast.checked) {
+            cheap.checked=false;
+        } else if (good.checked && cheap.checked) {
+            fast.checked=false;
+        } else if (fast.checked &&cheap.checked){
+            good.checked=false;
+        }
+    }
+</script>
+</body>
+</html>
